@@ -161,13 +161,14 @@ class ConfirmationCodeInput extends PureComponent<Props, State> {
           codeValue,
         },
         () => {
-          if (this.getCodeLength() === codeLength) {
-            if (blurOnSubmit) {
-              this.blur();
-            }
+          onFulfill(codeValue);
+          // if (this.getCodeLength() === codeLength) {
+          //   if (blurOnSubmit) {
+          //     this.blur();
+          //   }
 
-            onFulfill(codeValue);
-          }
+          //   onFulfill(codeValue);
+          // }
         },
       );
     },
